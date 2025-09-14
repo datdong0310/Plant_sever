@@ -24,7 +24,7 @@ public class ProfileService {
 
     public List<Profile> showAllProfiles(String token) {
         String username = jwtUtils.getUsernameFromJwt(token);
-        return profileRepo.findByUsername(username);
+        return profileRepo.findByUserUsername(username);
     }
 
     public List<Profile> findByKeyword(String keyword) {

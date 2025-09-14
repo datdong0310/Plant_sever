@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Repository
 public interface ProfileRepo extends JpaRepository<Profile, Long> {
-    List<Profile> findByUsername(String username);
+    List<Profile> findByUserUsername(String username);
     @Query(value = "SELECT * FROM profile p WHERE LOWER(IFNULL(p.name, '')) LIKE CONCAT('%', :keyword, '%')", nativeQuery = true)
     List<Profile> findByKeyword(@Param("keyword") String keyword);
     Boolean existsProfileByName(String name);
