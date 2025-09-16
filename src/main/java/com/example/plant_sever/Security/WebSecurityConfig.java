@@ -29,6 +29,7 @@ public class WebSecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                         .anyRequest().authenticated()
 
+
                 );
 
         // Use the Spring-managed filter, not a new instance

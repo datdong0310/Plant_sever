@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class PlantService {
-    private PlantRepo plantRepo;
+    private final PlantRepo plantRepo;
     public List<Plant> searchPlants(String keyword) {
         return plantRepo.searchByName(keyword.trim().toLowerCase());
     }

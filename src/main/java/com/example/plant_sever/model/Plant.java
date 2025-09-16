@@ -35,6 +35,7 @@ public class Plant {
     @Column(columnDefinition = "LONGTEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci")
     private String careguide;
 
-    private String imagePath;
+    @Column(name = "imageUrl", nullable = true)
+    private String imageUrl;
 
 }
